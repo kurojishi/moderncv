@@ -26,7 +26,7 @@
 
 % personal data
 \name{Francesco}{Berni}
-\title{System Development Engineer/SRE}                               % optional, remove / comment the line if not wanted
+\title{System Development Engineer}                               % optional, remove / comment the line if not wanted
 \born{August 1990}                                 % optional, remove / comment the line if not wanted
 \address{Dublin, Ireland}  % optional, remove / comment the line if not wanted; the "postcode city" and "country" arguments can be omitted or provided empty
 \email{kurojishi@kurjishi.me}                               % optional, remove / comment the line if not wanted
@@ -37,20 +37,6 @@
 \social[twitter]{kurojishi_cs}                             % optional, remove / comment the line if not wanted
 \social[github]{kurojishi}                              % optional, remove / comment the line if not wanted
 
-
-\extrainfo{additional information}                 % optional, remove / comment the line if not wanted
-\quote{Some quote}                                 % optional, remove / comment the line if not wanted
-
-% bibliography adjustments (only useful if you make citations in your resume, or print a list of publications using BibTeX)
-%   to show numerical labels in the bibliography (default is to show no labels)
-%\makeatletter\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}\makeatother
-\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}
-%   to redefine the bibliography heading string ("Publications")
-%\renewcommand{\refname}{Articles}
-
-% bibliography with mutiple entries
-%\usepackage{multibib}
-%\newcites{book,misc}{{Books},{Others}}
 %----------------------------------------------------------------------------------
 %            content
 %----------------------------------------------------------------------------------
@@ -59,116 +45,57 @@
 %-----       resume       ---------------------------------------------------------
 \makecvtitle
 
+\section{Experience}
+\cventry{March 2013-October 2013}{Research Consultant}{UCLA Network Research Lab}{LA}{}{\ I worked in a team of 7 researcher under Giovanni Pau, as a developer\newline{}
+Projects:
+\begin{itemize}
+\item C++ implementation of the NDN protocol for Vehicular networks
+\item Reverse engineering of a Wimax base station controller in ruby for the \href{https://www.geni.net/}{Geni Project}
+\item A web-crawler for the weibo social network in Python using Selenium, Phantomjs
+\end{itemize}}
+\cventry{September 2015-April 2017}{System and Network Engineer}{Laboratori Gulielmo Marconi}{Bologna}{}{Network and Linux system management, design, deploy and monitoring of services for a pletora of different customers.}
+\cventry{May 2017-present}{System Development Engineer I/II}{Amazon Web Services}{Dublin}{}{Over the years I've had a lot of responsibilities and space wildly in subjects\newline{}
+Projects and Responsibilities (from the most recent)
+\begin{itemize}
+  \item Automatic healthchecks of connectivity between AWS Outposts installations and regions
+  \item Non glibc development of asynchronous operation management for network devices operation (netconf, snmp, large files copy over short-lived connections)
+  \item Short lived credentials on long-lived services autorotation
+  \item AWS Outposts networking device management initial design and development
+    \begin{itemize}
+      \item Credentials rotation for network devices disconnected from the network where credentials live
+      \item No touch deployments and fleet management for said services
+      \item Musl Rust netconf (for junos and NXOS) and snmp cross compiled implementations
+      \item Python webservice to bridge seamlessly management of network device in an AWS Outposts and in Region while keeping security
+      \item Syslog data flow to region from devices
+      \item automatic generation of network devices configuration
+      \item full rollout plan and execution to all aws regions
+    \end{itemize}
+  \item Isolated region deployments (no eyes on the deployment debugging and automation)
+  \item Automatic infrastructure deployment for new services so that all services could start at as close to 0 as possible actions for new deployments
+  \item Region build bootstrap automation for networking services dropping into badly built services to remove manual actions for builds
+  \item Organization wide capacity rescaling(down) to reduce waste(few thousand hosts and dozens services)
+  \item Deployment automation for new services to make fleet management seamless
+\end{itemize}}
+
 \section{Education}
 \cventry{2004--2009}{Diploma in information technology}{Institute of technology BUS Blaise Pascal}{Reggio Emilia}{}{Strong computer science curriculum with basics of networking, operating systems, calculus, science, philosophy, history and literature.}
 \cventry{2009--2015}{Bachelor Degree in Computer Science}{Bachelor Degree in Computer Science}{Bologna}{}{ Curriculum of Networking, Unix, theoretical computer science, programming languages and Calculus while learning how to organize my work solo or in a team. 
-Projects highlights: Microkernel for mips architecture in C; Microblogging service in python; Fork of the linux kernel networking module; Study and implementation of a Testing Framework for VDE}
+Projects highlights: Microkernel for mips architecture in C; Microblogging service in python; Fork of the linux kernel networking module; Study and implementation of a Testing Framework for Virtual Networking Framework VDE}
 
-\section{Experience}
-\cventry{year--year}{Job title}{Employer}{City}{}{General description no longer than 1--2 lines.\newline{}
-Detailed achievements:
-\begin{itemize}
-\item Achievement 1
-\item Achievement 2 (with sub-achievements)
-  \begin{itemize}
-  \item Sub-achievement (a);
-  \item Sub-achievement (b), with sub-sub-achievements (don't do this!);
-    \begin{itemize}
-    \item Sub-sub-achievement i;
-    \item Sub-sub-achievement ii;
-    \item Sub-sub-achievement iii;
-    \end{itemize}
-  \item Sub-achievement (c);
-  \end{itemize}
-\item Achievement 3
-\item Achievement 4
-\end{itemize}}
-\cventry{year--year}{Job title}{Employer}{City}{}{Description line 1\newline{}Description line 2\newline{}Description line 3}
-\subsection{Miscellaneous}
-\cventry{year--year}{Job title}{Employer}{City}{}{Description}
+
+\section{Skills}
+\cvdoubleitem{Development}{Design, development, deployment, and operating of infrastructure services}{SRE}{Focus on zero touch, reliable and available infrastructure management that can be operated by humans painlessly}
+\cvdoubleitem{Networking}{All the basics to develop tooling to manage and monitor complex networks}{Programming Languages}{Python, Rust, Go, Ruby, Bash, Typescript, C/C++}
+
 
 \section{Languages}
-\cvitemwithcomment{Language 1}{Skill level}{Comment}
-\cvitemwithcomment{Language 2}{Skill level}{Comment}
-\cvitemwithcomment{Language 3}{Skill level}{Comment}
-\cvitemwithcomment{Language 4}{Skill level}{Comment}
+\cvdoubleitem{Italian}{Native Speaker}{English}{Native Speaker Equivalent}
 
-\section{Computer skills}
-\cvdoubleitem{category 1}{XXX, YYY, ZZZ}{category 4}{XXX, YYY, ZZZ}
-\cvdoubleitem{category 2}{XXX, YYY, ZZZ}{category 5}{XXX, YYY, ZZZ}
-\cvdoubleitem{category 3}{XXX, YYY, ZZZ}{category 6}{XXX, YYY, ZZZ}
-
-\section{Skill matrix}
-\cvitem{Skill matrix}{Alternatively, provide a skill matrix to show off your skills}
-%% Skill matrix as an alternative to rate one's skills, computer or other. 
-
-%% Adjusts width of skill matrix columns. 
-%% Usage \setcvskillcolumns[<width>][<factor>][<exp_width>]
-%% <width>, <exp_width> should be lengths smaller than \textwidth, <factor> needs to be between 0 and 1.
-%% Examples:
-% \setcvskillcolumns[5em][][]%    adjust first column. Same as \setcvskillcolumns[5em]
-% \setcvskillcolumns[][0.45][]%   adjust third (skill) column. Same as \setcvskillcolumns[][0.45]
-% \setcvskillcolumns[][][\widthof{``Year''}]%     adjust fourth (years) column.
-% \setcvskillcolumns[][0.45][\widthof{``Year''}]%
-% \setcvskillcolumns[\widthof{``Languag''}][0.48][]
-% \setcvskillcolumns[\widthof{``Languag''}]%
-
-%% Adjusts width of legend columns. Usage \setcvskilllegendcolumns[<width>][<factor>]
-%% <factor> needs to be between 0 and 1. <width> should be a length smaller than \textwidth
-%% Examples:
-% \setcvskilllegendcolumns[][0.45]
-% \setcvskilllegendcolumns[\widthof{``Legend''}][0.45]
-% \setcvskilllegendcolumns[0ex][0.46]% this is usefull for the banking style
-
-%% Add a legend if you are using \cvskill{<1-5>} command or \cvskillentry
-%% Usage \cvskilllegend[*][<post_padding>][<first_level>][<second_level>][<third_level>][<fourth_level>][<fifth_level>]{<name>}
-% \cvskilllegend % insert default legend without lines
-\cvskilllegend*[1em]{}% adjust post spacing
-% \cvskilllegend*{Legend}%  Alternatively add a description string
-%% adjust the legend entries for other languages, here German
-% \cvskilllegend[0.2em][Grundkenntnisse][Grundkenntnisse und eigene Erfahrung in Projekten][Umfangreiche Erfahrung in Projekten][Vertiefte Expertenkenntnisse][Experte\,/\,Spezialist]{Legende}
-
-%% Alternative legend style with the first three skill levels in one column
-%% Usage \cvskillplainlegend[*][<post_padding>][<first_level>][<second_level>][<third_level>][<fourth_level>][<fifth_level>]{<name>}
-% \setcvskilllegendcolumns[][0.6]%  works for classic, casual, banking
-% \setcvskilllegendcolumns[][0.55]%  works better for oldstyle and fancy
-% \cvskillplainlegend{}
-% \cvskillplainlegend[0.2em][Grundkenntnisse][Grundkenntnisse und eigene Erfahrung in Projekten][Umfangreiche Erfahrung in Projekten][Vertiefte Expertenkenntnisse][Experte/Guru]{Legende}
-
-%% Add a head of the skill matrix table with descriptions.
-%% Usage \cvskillhead[<post_padding>][<Level>][<Skill>][<Years>][<Comment>]%
-\cvskillhead[-0.1em]%   this inserts the standard legend in english and adjust padding
-%% Adjust head of the skill matrix for other languages
-% \cvskillhead[0.25em][Level][F\"ahigkeit][Jahre][Bemerkung]
-
-%% \cvskillentry[*][<post_padding>]{<skill_cathegory>}{<0-5>}{<skill_name>}{<years_of_experience>}{<comment>}% 
-%% Example usages:
-\cvskillentry*{Language:}{3}{Python}{2}{I'm so experienced in Python and have realised a million projects. At least.}
-\cvskillentry{}{2}{Lilypond}{14}{So much sheet music! Man, I'm the best!}
-\cvskillentry{}{3}{\LaTeX}{14}{Clearly I rock at \LaTeX}
-\cvskillentry*{OS:}{3}{Linux}{2}{I only use Archlinux btw}% notice the use of the starred command and the optional 
-\cvskillentry*[1em]{Methods}{4}{SCRUM}{8}{SCRUM master for 5 years}
-%% \cvskill{<0-5>} command
-% \cvitem{\textbackslash{cvskill}:}{Skills can be visually expressed by the \textbackslash{cvskill} command, e.g. \cvskill{2}}
 
 \section{Interests}
-\cvitem{hobby 1}{Description}
-\cvitem{hobby 2}{Description}
-\cvitem{hobby 3}{Description}
+\cvitem{Games}{I play all kind of games, board games, ttrpg, videogames, playtest them, think about their design, the whole thing}
+\cvitem{Aikido}{Been practicing all my adult life, I'm currently a second dan black belt}
+\cvitem{Scale modeling}{Started a few years ago and kept me sane during less than great times}
 
-\section{Extra 1}
-\cvlistitem{Item 1}
-\cvlistitem{Item 2}
-\cvlistitem{Item 3. This item is particularly long and therefore normally spans over several lines. Did you notice the indentation when the line wraps?}
-
-\section{Extra 2}
-\cvlistdoubleitem{Item 1}{Item 4}
-\cvlistdoubleitem{Item 2}{Item 5\cite{book2}}
-\cvlistdoubleitem{Item 3}{Item 6. Like item 3 in the single column list before, this item is particularly long to wrap over several lines.}
-
-%\clearpage\end{CJK*}                              % if you are typesetting your resume in Chinese using CJK; the \clearpage is required for fancyhdr to work correctly with CJK, though it kills the page numbering by making \lastpage undefined
 \end{document}
-
-
 %% end of file `template.tex'.
-
