@@ -19,7 +19,7 @@
 %\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
 
 % adjust the page margins
-\usepackage[scale=0.75]{geometry}
+\usepackage[scale=0.85]{geometry}
 \setlength{\footskip}{122.40004pt}                 % depending on the amount of information in the footer, you need to change this value. comment this line out and set it to the size given in the warning
 %\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
 %\setlength{\makecvheadnamewidth}{10cm}            % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
@@ -57,21 +57,20 @@ Projects:
 \cventry{May 2017-present}{System Development Engineer I/II}{Amazon Web Services}{Dublin}{}{Over the years I've had a lot of responsibilities and space wildly in subjects\newline{}
 Projects and Responsibilities (from the most recent)
 \begin{itemize}
-  \item Automatic healthchecks of connectivity between AWS Outposts installations and regions
-  \item Non glibc development of asynchronous operation management for network devices operation (netconf, snmp, large files copy over short-lived connections)
+  \item Design and implementation of healthchecks canaries of outside the network devices
+  \item Non glibc development of asynchronous operation execution on network devices operation
   \item Short lived credentials on long-lived services autorotation
-  \item AWS Outposts networking device management initial design and development
+  \item AWS Outposts networking device management initial development and rollout
     \begin{itemize}
       \item Credentials rotation for network devices disconnected from the network where credentials live
-      \item No touch deployments and fleet management for said services
-      \item Musl Rust netconf (for junos and NXOS) and snmp cross compiled implementations
-      \item Python webservice to bridge seamlessly management of network device in an AWS Outposts and in Region while keeping security
-      \item Syslog data flow to region from devices
+      \item No touch deployments and fleet management
+      \item MUSL Rust netconf and snmp cross compiled implementations
+      \item Syslog data flow in MUSL environemnt
+      \item Python webservice to bridge seamlessly management of network device outside a secure zone
       \item automatic generation of network devices configuration
       \item full rollout plan and execution to all aws regions
     \end{itemize}
-  \item Isolated region deployments (no eyes on the deployment debugging and automation)
-  \item Automatic infrastructure deployment for new services so that all services could start at as close to 0 as possible actions for new deployments
+  \item Automatic infrastructure deployment for new services so that all services could start at as close to 0 human actions as possible
   \item Region build bootstrap automation for networking services dropping into badly built services to remove manual actions for builds
   \item Organization wide capacity rescaling(down) to reduce waste(few thousand hosts and dozens services)
   \item Deployment automation for new services to make fleet management seamless
