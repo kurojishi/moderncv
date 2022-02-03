@@ -26,10 +26,10 @@
 
 % personal data
 \name{Francesco}{Berni}
-\title{System Development Engineer}                               % optional, remove / comment the line if not wanted
+\title{System Development Engineer/SRE}                               % optional, remove / comment the line if not wanted
 \born{August 1990}                                 % optional, remove / comment the line if not wanted
 \address{Dublin, Ireland}  % optional, remove / comment the line if not wanted; the "postcode city" and "country" arguments can be omitted or provided empty
-\email{kurojishi@kurjishi.me}                               % optional, remove / comment the line if not wanted
+\email{kurojishi@kurojishi.me}                               % optional, remove / comment the line if not wanted
 \homepage{kurojishi.me}                         % optional, remove / comment the line if not wanted
 
 % Social icons
@@ -45,46 +45,56 @@
 %-----       resume       ---------------------------------------------------------
 \makecvtitle
 
+\section{Introduction}
+I'm a System Developer Engineer, straight in the middle between a Software Developer and a System Engineer, with a focus on designing software to make low level infrastructure management easy to operate for humans at scale.\newline{}
+My experience is, in large amount, in the phisical networking space mostly in automating large networks management, monitoring, and developing software services for that end.\newline{}
+In that space I've automated provisioning and bootstrap of new services, both in virtual and phisical environments, designed and developed new services from scratch.
+
 \section{Experience}
-\cventry{March 2013-October 2013}{Research Consultant}{UCLA Network Research Lab}{LA}{}{\ I worked in a team of 7 researcher under Giovanni Pau, as a developer\newline{}
-Projects:
+\cventry{May 2017-present}{System Development Engineer I then II}{Amazon Web Services}{Dublin}{}{
+At the start of my AWS experience I've worked on the global network management services region build bootstrap, removing manual operations to dozens of new AWS region builds helping reducing bootstrap times for each service from weeks to days to, for some, hours.\newline{}
+Then moved to the AWS Outposts project in the networking space where I've helped develop, build, and deploy the global infrastructure for network management of all AWS Outposts installations. \newline{}
+Projects and Responsibilities (from the most recent):
 \begin{itemize}
-\item C++ implementation of the NDN protocol for Vehicular networks
-\item Reverse engineering of a Wimax base station controller in ruby for the \href{https://www.geni.net/}{Geni Project}
-\item A web-crawler for the weibo social network in Python using Selenium, Phantomjs
-\end{itemize}}
-\cventry{September 2015-April 2017}{System and Network Engineer}{Laboratori Gulielmo Marconi}{Bologna}{}{Network and Linux system management, design, deploy and monitoring of services for a pletora of different customers.}
-\cventry{May 2017-present}{System Development Engineer I/II}{Amazon Web Services}{Dublin}{}{Over the years I've had a lot of responsibilities and space wildly in subjects\newline{}
-Projects and Responsibilities (from the most recent)
-\begin{itemize}
-  \item Design and implementation of healthchecks canaries of outside the network devices
+  \item Design and implementation of healthchecks canaries to validate paths from a secure perimeter to network devices
   \item Non glibc development of asynchronous operation execution on network devices operation
   \item Short lived credentials on long-lived services autorotation
   \item AWS Outposts networking device management initial development and rollout
     \begin{itemize}
       \item Credentials rotation for network devices disconnected from the network where credentials live
-      \item No touch deployments and fleet management
-      \item MUSL Rust netconf and snmp cross compiled implementations
-      \item Syslog data flow in MUSL environemnt
-      \item Python webservice to bridge seamlessly management of network device outside a secure zone
+      \item Library constrained Rust netconf and snmp cross compiled implementations
+      \item Syslog data collection in a restrained environment
+      \item Python Webservices to bridge seamlessly management of network device outside a secure zone
       \item automatic generation of network devices configuration
-      \item full rollout plan and execution to all aws regions
+      \item full rollout to all aws regions
     \end{itemize}
-  \item Automatic infrastructure deployment for new services so that all services could start at as close to 0 human actions as possible
-  \item Region build bootstrap automation for networking services dropping into badly built services to remove manual actions for builds
-  \item Organization wide capacity rescaling(down) to reduce waste(few thousand hosts and dozens services)
-  \item Deployment automation for new services to make fleet management seamless
-\end{itemize}}
+  \item Automatic infrastructure deployment for new services so that all services could be deployed as close to no human actions as possible
+  \item Region build bootstrap automation for services necessary at day 1 before capacity is in region
+  \item Organization wide capacity rescaling to reduce waste(impacting a fewthousand hosts and a dozen services)
+  \item Deployment automation for new infrastructural services to make fleet management seamless
+\end{itemize}
+}
+\cventry{September 2015-April 2017}{System and Network Engineer}{Laboratori Gulielmo Marconi}{Bologna}{}{
+Network and Linux system management, design, deploy and monitoring of services for customer spacing like Healthcare organizations, Hospitals, Municipalities and Public Administrations dedicated ISP.}
+\cventry{March 2013-October 2013}{Research Consultant}{UCLA Network Research Lab}{LA}{}{
+I worked in a team of researcher specialized in automotive network designs, as a developer the some of the Lab projects:
+\begin{itemize}
+\item C++ implementation of the NDN protocol for Vehicular networks
+\item Reverse engineering of a Wimax base station SNMP controller in ruby for the \href{https://www.geni.net/}{Geni Project}
+\item A web-crawler for the weibo social network in Python using Selenium and Phantomjs
+\end{itemize}
+}
 
 \section{Education}
-\cventry{2004--2009}{Diploma in information technology}{Institute of technology BUS Blaise Pascal}{Reggio Emilia}{}{Strong computer science curriculum with basics of networking, operating systems, calculus, science, philosophy, history and literature.}
 \cventry{2009--2015}{Bachelor Degree in Computer Science}{Bachelor Degree in Computer Science}{Bologna}{}{ Curriculum of Networking, Unix, theoretical computer science, programming languages and Calculus while learning how to organize my work solo or in a team. 
 Projects highlights: Microkernel for mips architecture in C; Microblogging service in python; Fork of the linux kernel networking module; Study and implementation of a Testing Framework for Virtual Networking Framework VDE}
+\cventry{2004--2009}{Diploma in information technology}{Institute of technology BUS Blaise Pascal}{Reggio Emilia}{}{Strong computer science curriculum with basics of networking, operating systems, calculus, science, philosophy, history and literature.}
 
 
 \section{Skills}
-\cvdoubleitem{Development}{Design, development, deployment, and operating of infrastructure services}{SRE}{Focus on zero touch, reliable and available infrastructure management that can be operated by humans painlessly}
-\cvdoubleitem{Networking}{All the basics to develop tooling to manage and monitor complex networks}{Programming Languages}{Python, Rust, Go, Ruby, Bash, Typescript, C/C++}
+\cvdoubleitem{Development}{Design, development, deployment, and operating of infrastructure services in geodistributed teams.}{SRE}{Focus on zero touch, reliable and available infrastructure management that can be operated by humans painlessly in Linux environments}
+\cvdoubleitem{Networking}{All the basics to develop tooling to manage and monitor complex networks}{Programming Languages}{Python, Rust, Go, Bash, C/C++, Ruby, probably more}
+
 
 
 \section{Languages}
